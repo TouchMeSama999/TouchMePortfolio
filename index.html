@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Touch Me</title>
+
+    <!-- Tailwindcss -->
+    <link href="src/output.css" rel="stylesheet" />
+
+    <!-- Custom Style CSS -->
+    <link href="style.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/9d7604263d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body
+    class="min-h-screen bg-black text-gray-200 font-sans overflow-x-hidden flex flex-col"
+  >
+    <!-- Animated Background -->
+    <div class="gradient-bg fixed top-0 left-0 w-full h-full -z-50"></div>
+
+    <!-- Navigation -->
+    <nav
+      class="backdrop-blur-md sticky top-0 z-50 border-b border-blue-900"
+      style="background-color: rgba(0, 0, 0, 0.8)"
+    >
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a
+          href="#"
+          class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600"
+        >
+          TOUCH ME
+        </a>
+
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="hover:text-blue-400 transition">Home</a>
+          <a href="#portfolio" class="hover:text-blue-400 transition"
+            >Portfolio</a
+          >
+          <a href="#services" class="hover:text-blue-400 transition"
+            >Services</a
+          >
+          <a href="#about" class="hover:text-blue-400 transition">About</a>
+          <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+        </div>
+
+        <button class="md:hidden text-xl" id="mobile-menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden hidden bg-black backdrop-blur-md"
+        style="background-color: rgba(0, 0, 0, 0)"
+        id="mobile-menu"
+      >
+        <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+          <a
+            href="#home"
+            class="py-2 hover:text-blue-400 transition border-b border-blue-900"
+            >Home</a
+          >
+          <a
+            href="#portfolio"
+            class="py-2 hover:text-blue-400 transition border-b border-blue-900"
+            >Portfolio</a
+          >
+          <a
+            href="#services"
+            class="py-2 hover:text-blue-400 transition border-b border-blue-900"
+            >Services</a
+          >
+          <a
+            href="#about"
+            class="py-2 hover:text-blue-400 transition border-b border-blue-900"
+            >About</a
+          >
+          <a href="#contact" class="py-2 hover:text-blue-400 transition"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-grow">
+      <!-- Hero Section -->
+      <section id="home" class="py-20 md:py-32 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500"
+                >Visionary</span
+              >
+              <br />Multimedia Artistry
+            </h1>
+            <p class="text-lg md:text-xl mb-8 text-gray-300">
+              Creating immersive experiences through digital art, videos, and
+              traditional mediums.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#contact"
+                class="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full font-medium hover:opacity-90 transition"
+              >
+                Get In Touch
+              </a>
+              <a
+                href="#portfolio"
+                class="px-6 py-3 border border-blue-500 rounded-full font-medium hover:bg-blue-900 hover:bg-opacity-30 transition"
+              >
+                View Work
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center relative">
+            <div
+              class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-800 opacity-10"
+              ></div>
+              <img
+                src="images/Jay-Digital-Artwork-BRUH(Cropped).png"
+                alt="Self Portrait of Jay"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              class="absolute -bottom-5 -right-5 md:-right-10 w-20 h-20 md:w-32 md:h-32 rounded-full bg-blue-600 opacity-40 -z-10 animate-bubble-float1"
+            ></div>
+            <div
+              class="absolute -top-5 -left-5 md:-left-10 w-16 h-16 rounded-full bg-blue-800 opacity-40 -z-10 animate-bubble-float2"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section
+        id="portfolio"
+        class="py-16 px-4"
+        style="background-color: rgba(0, 0, 0, 0.7)"
+      >
+        <div class="container mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">
+              My
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500"
+                >Portfolio</span
+              >
+            </h2>
+            <p class="max-w-2xl mx-auto text-gray-400">
+              Explore my diverse range of creative work across different mediums
+              and disciplines.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap justify-center mb-10 gap-2">
+            <button
+              class="px-4 py-2 hover:bg-blue-900 rounded-full text-sm font-medium transition portfolio-filter"
+              data-filter="all"
+            >
+              All Work
+            </button>
+            <button
+              class="px-4 py-2 hover:bg-blue-900 rounded-full text-sm font-medium transition portfolio-filter"
+              data-filter="video"
+            >
+              Video Work
+            </button>
+            <button
+              class="px-4 py-2 hover:bg-blue-900 rounded-full text-sm font-medium transition portfolio-filter"
+              data-filter="digital"
+            >
+              Digital Art
+            </button>
+            <button
+              class="px-4 py-2 hover:bg-blue-900 rounded-full text-sm font-medium transition portfolio-filter"
+              data-filter="traditional"
+            >
+              Traditional Art
+            </button>
+            <button
+              class="px-4 py-2 hover:bg-blue-900 rounded-full text-sm font-medium transition portfolio-filter"
+              data-filter="other"
+            >
+              Others
+            </button>
+          </div>
+
+          <!-- Portfolio Grid -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            id="portfolio-grid"
+          >
+            <!-- Digital Art Items -->
+            <div class="portfolio-item group" data-category="digital">
+              <div
+                class="relative overflow-hidden rounded-xl border border-blue-900 h-64"
+              >
+                <img
+                  src="images/Jay-Digital-Artwork-War.jpg"
+                  alt="Digital artwork titled War"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition flex items-end"
+                >
+                  <div
+                    class="p-4 translate-y-5 group-hover:translate-y-0 transition"
+                  >
+                    <h3 class="text-xl font-bold mb-1">War</h3>
+                    <p class="text-sm text-gray-300">
+                      Digital Self Portrait, 2020
+                    </p>
+                    <button
+                      class="mt-2 text-blue-300 hover:text-white text-sm font-medium view-artwork"
+                      data-title="War"
+                      data-mediumanddate="Digital Self Portrait, 2020"
+                      data-description="Selfportrait of myself in Attack on Titan style."
+                      data-image="images/Jay-Digital-Artwork-War.jpg"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video Work Items -->
+            <div
+              class="portfolio-item group portfolio-item-all"
+              data-category="video"
+              style="display: none"
+            >
+              <div
+                class="relative overflow-hidden rounded-xl border border-blue-900 h-64"
+              >
+                <img
+                  src="images/Jay-Music_Video_Parody-2022.png"
+                  alt="Video production"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition flex items-end"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <div
+                      id="playButton"
+                      class="w-12 h-12 rounded-full flex items-center justify-center"
+                      style="background-color: rgba(255, 0, 0)"
+                    >
+                      <i class="fab fa-youtube text-white"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="p-4 translate-y-5 group-hover:translate-y-0 transition"
+                  >
+                    <h3 class="text-xl font-bold mb-1">2022</h3>
+                    <p class="text-sm text-gray-300">
+                      Music Video Parody, 2022
+                    </p>
+                    <button
+                      class="mt-2 text-blue-300 hover:text-white text-sm font-medium view-artwork"
+                      data-title="2022"
+                      data-mediumanddate="Music Video Parody, 2022"
+                      data-description="A compilation of my favorite moments from 2022, set to a parody song cover by VKO. The video consist of various clips and photos of me, my friends, and family."
+                      data-image="https://img.youtube.com/vi/fKG6fhDPaZw/maxresdefault.jpg"
+                      data-youtube="fKG6fhDPaZw"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Traditional Art Items -->
+            <div class="portfolio-item group" data-category="traditional">
+              <div
+                class="relative overflow-hidden rounded-xl border border-blue-900 h-64"
+              >
+                <img
+                  src="images/Jay-Drawing-Death1.jpg"
+                  alt="Traditional painting"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition flex items-end"
+                >
+                  <div
+                    class="p-4 translate-y-5 group-hover:translate-y-0 transition"
+                  >
+                    <h3 class="text-xl font-bold mb-1">Death</h3>
+                    <p class="text-sm text-gray-300">
+                      Ball Point Pen Drawing, 2017
+                    </p>
+                    <button
+                      class="mt-2 text-blue-300 hover:text-white text-sm font-medium view-artwork"
+                      data-title="Death"
+                      data-mediumanddate="Ball Point Pen Drawing, 2017"
+                      data-description="A drawing of Death stylized as a typical grim reaper, referenced from an online comic strip."
+                      data-image1="images/Jay-Drawing-Death1.jpg"
+                      data-image2="images/Jay-Drawing-Death2.jpg"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video Work Items -->
+            <div
+              class="portfolio-item group portfolio-item-all"
+              data-category="video"
+              style="display: none"
+            >
+              <div
+                class="relative overflow-hidden rounded-xl border border-blue-900 h-64"
+              >
+                <img
+                  src="images/Jay-Trailer_Parody-Trash_Taste_2077.jpg"
+                  alt="Video production"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition flex items-end"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <div
+                      id="playButton"
+                      class="w-12 h-12 rounded-full flex items-center justify-center"
+                      style="background-color: rgba(255, 0, 0)"
+                    >
+                      <i class="fab fa-youtube text-white"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="p-4 translate-y-5 group-hover:translate-y-0 transition"
+                  >
+                    <h3 class="text-xl font-bold mb-1">Trash Taste 2077</h3>
+                    <p class="text-sm text-gray-300">Trailer Parody, 2021</p>
+                    <button
+                      class="mt-2 text-blue-300 hover:text-white text-sm font-medium view-artwork"
+                      data-title="Trash Taste 2077"
+                      data-mediumanddate="Trailer Parody, 2021"
+                      data-description="One of my most well recieved YouTube video and a personal favorite. It's a parody a viral meme video &quot;Cyberpunk 2077 Russian Edition&quot; but with the Trash Taste Podcast. It was a lot of fun to make specially with the community's inside jokes and references.
+                    "
+                      data-image="https://img.youtube.com/vi/9asvoVZJXJA/maxresdefault.jpg"
+                      data-youtube="9asvoVZJXJA"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Other Items -->
+            <div
+              class="portfolio-item group portfolio-item-all"
+              data-category="other"
+              style="display: none"
+            >
+              <div
+                class="relative overflow-hidden rounded-xl border border-blue-900 h-64"
+              >
+                <img
+                  src="images/Jay-E-Museum-Social_Science_Disciplines.png"
+                  alt="Video production"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition flex items-end"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <div
+                      id="playButton"
+                      class="w-12 h-12 rounded-full flex items-center justify-center"
+                      style="background-color: rgba(208, 68, 35)"
+                    >
+                      <i class="fas fa-file-powerpoint text-white"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="p-4 translate-y-5 group-hover:translate-y-0 transition"
+                  >
+                    <h3 class="text-xl font-bold mb-1">
+                      Social Science Disciplines
+                    </h3>
+                    <p class="text-sm text-gray-300">
+                      E-Museum PowerPoint, 2022
+                    </p>
+                    <button
+                      class="mt-2 text-blue-300 hover:text-white text-sm font-medium view-artwork"
+                      data-title="Social Science Disciplines"
+                      data-mediumanddate="E-Museum PowerPoint, 2022"
+                      data-description="A Digital Museum presentation I made for my Social Science class. The PowerPoint presentation are downloadable and viewable online, note that the file was made in an older version of PowerPoint so it may not display as intended in newer versions."
+                      data-image="https://img.youtube.com/vi/d2Jp9xwuzlE/maxresdefault.jpg"
+                      data-youtube="d2Jp9xwuzlE"
+                      data-linktitle1="OneDrive:"
+                      data-linktitle2="Google Drive:"
+                      data-link1="https://1drv.ms/p/s!AqO_STFbC9iLgSLYtrvzMccoS1cp?e=X7z5Tj"
+                      data-link2="https://drive.google.com/file/d/1EPoDOvjRkBb23w1mk8V0IPJ0y4v7-RTu/view?usp=sharing"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Traditional Art Items -->
+            <div class="portfolio-item group" data-category="traditional">
+              <div
+                class="relative overflow-hidden rounded-xl border border-blue-900 h-64"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1531214153530-1d9d1375d5a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                  alt="Traditional art collage"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition flex items-end"
+                >
+                  <div
+                    class="p-4 translate-y-5 group-hover:translate-y-0 transition"
+                  >
+                    <h3 class="text-xl font-bold mb-1">Mixed Media I</h3>
+                    <p class="text-sm text-gray-300">
+                      Mixed Media Collage, 2020
+                    </p>
+                    <button
+                      class="mt-2 text-blue-300 hover:text-white text-sm font-medium view-artwork"
+                      data-title="Mixed Media I"
+                      data-description="Abstract composition combining acrylic paint, found materials, and ink transfers."
+                      data-image="https://images.unsplash.com/photo-1531214153530-1d9d1375d5a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Traditional Art Items -->
+            <div class="portfolio-item group" data-category="traditional">
+              <div
+                class="relative overflow-hidden rounded-xl border border-blue-900 h-64"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1531214153530-1d9d1375d5a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                  alt="Traditional art collage"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition flex items-end"
+                >
+                  <div
+                    class="p-4 translate-y-5 group-hover:translate-y-0 transition"
+                  >
+                    <h3 class="text-xl font-bold mb-1">Mixed Media I</h3>
+                    <p class="text-sm text-gray-300">
+                      Mixed Media Collage, 2020
+                    </p>
+                    <button
+                      class="mt-2 text-blue-300 hover:text-white text-sm font-medium view-artwork"
+                      data-title="Mixed Media I"
+                      data-description="Abstract composition combining acrylic paint, found materials, and ink transfers."
+                      data-image="https://images.unsplash.com/photo-1531214153530-1d9d1375d5a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Traditional Art Items -->
+            <div class="portfolio-item group" data-category="traditional">
+              <div
+                class="relative overflow-hidden rounded-xl border border-blue-900 h-64"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1531214153530-1d9d1375d5a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                  alt="Traditional art collage"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition flex items-end"
+                >
+                  <div
+                    class="p-4 translate-y-5 group-hover:translate-y-0 transition"
+                  >
+                    <h3 class="text-xl font-bold mb-1">Mixed Media I</h3>
+                    <p class="text-sm text-gray-300">
+                      Mixed Media Collage, 2020
+                    </p>
+                    <button
+                      class="mt-2 text-blue-300 hover:text-white text-sm font-medium view-artwork"
+                      data-title="Mixed Media I"
+                      data-description="Abstract composition combining acrylic paint, found materials, and ink transfers."
+                      data-image="https://images.unsplash.com/photo-1531214153530-1d9d1375d5a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Traditional Art Items -->
+            <div class="portfolio-item group" data-category="traditional">
+              <div
+                class="relative overflow-hidden rounded-xl border border-blue-900 h-64"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1531214153530-1d9d1375d5a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                  alt="Traditional art collage"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition flex items-end"
+                >
+                  <div
+                    class="p-4 translate-y-5 group-hover:translate-y-0 transition"
+                  >
+                    <h3 class="text-xl font-bold mb-1">Mixed Media I</h3>
+                    <p class="text-sm text-gray-300">
+                      Mixed Media Collage, 2020
+                    </p>
+                    <button
+                      class="mt-2 text-blue-300 hover:text-white text-sm font-medium view-artwork"
+                      data-title="Mixed Media I"
+                      data-description="Abstract composition combining acrylic paint, found materials, and ink transfers."
+                      data-image="https://images.unsplash.com/photo-1531214153530-1d9d1375d5a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div id="pagination" class="flex justify-center mt-12 gap-2"></div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="py-20 px-4">
+        <div class="container mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">
+              Creative
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500"
+                >Services</span
+              >
+            </h2>
+            <p class="max-w-2xl mx-auto text-gray-400">
+              Custom solutions tailored to bring your vision to life across
+              multiple creative disciplines.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-xl p-6 border border-blue-900 hover:border-blue-600 transition"
+            >
+              <div
+                class="w-14 h-14 rounded-full bg-blue-800 flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-paint-brush text-2xl text-blue-300"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Digital Art & Illustration</h3>
+              <p class="text-gray-400">
+                Custom digital paintings, character designs, and illustrations
+                for books, games, and marketing.
+              </p>
+              <ul class="mt-4 space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                  <span>Concept Art</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                  <span>Album Covers</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                  <span>Magazine Design</span>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-xl p-6 border border-blue-900 hover:border-blue-600 transition"
+            >
+              <div
+                class="w-14 h-14 rounded-full bg-blue-800 flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-film text-2xl text-blue-300"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Video Production</h3>
+              <p class="text-gray-400">
+                Cinematic videos, music videos, and promotional content with
+                professional editing and effects.
+              </p>
+              <ul class="mt-4 space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                  <span>Short Films</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                  <span>Music Videos</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                  <span>Product Promos</span>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-xl p-6 border border-blue-900 hover:border-blue-600 transition"
+            >
+              <div
+                class="w-14 h-14 rounded-full bg-blue-800 flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-project-diagram text-2xl text-blue-300"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Other Services</h3>
+              <p class="text-gray-400">
+                Additional creative services including photo editing, page
+                layout design, and presentation materials.
+              </p>
+              <ul class="mt-4 space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                  <span>Photo Editing</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                  <span>Page Layout Design</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                  <span>PowerPoint Design</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-20 px-4 bg-black bg-opacity-70">
+        <div class="container mx-auto">
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+              <div
+                class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl"
+              >
+                <img
+                  src="images/Jay-Portrait.jpg"
+                  alt="Artist portrait"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="md:w-2/3 md:pl-12">
+              <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                About
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500"
+                  >Me</span
+                >
+              </h2>
+              <p class="text-gray-300 mb-6">
+                I'm Jay Romanes, a multimedia artist with over 8 years of
+                experience creating compelling visuals across traditional and
+                digital mediums. My journey began with pencil drawings for my
+                school activities but quickly evolved to encompass digital tools
+                that expanded my creative possibilities.
+              </p>
+              <p class="text-gray-300 mb-8">
+                My work is driven by a deep fascination with the world of art
+                and human experience, often exploring themes of connection,
+                identity, and perception. Each project is an opportunity to push
+                boundaries and create something that resonates on both aesthetic
+                and emotional levels.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div>
+                  <h3 class="text-lg font-bold mb-3 text-blue-400">Skills</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-center">
+                      <span
+                        class="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                      ></span>
+                      Video Editing
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                      ></span>
+                      Photo Editing
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                      ></span>
+                      Graphic Design
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                      ></span>
+                      Digital Drawing
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                      ></span>
+                      Traditional Artistry
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold mb-3 text-blue-400">Programs</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-center">
+                      <span
+                        class="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                      ></span>
+                      Premiere Pro
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                      ></span>
+                      Photoshop
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                      ></span>
+                      Canva
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                      ></span>
+                      ibis Paint X
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                      ></span>
+                      PowerPoint
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex space-x-4">
+                <a
+                  href="https://www.instagram.com"
+                  class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center hover:bg-blue-800 transition"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com"
+                  class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center hover:bg-blue-800 transition"
+                >
+                  <i class="fab fa-youtube"></i>
+                </a>
+                <a
+                  href="https://www.indeed.com"
+                  class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center hover:bg-blue-800 transition"
+                >
+                  <i class="fas fa-briefcase"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none z-0">
+          <div
+            class="absolute inset-0 bg-black opacity-70 pointer-events-none z-0"
+          ></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-transparent opacity-20 pointer-events-none z-0"
+          ></div>
+        </div>
+        <div class="container mx-auto relative z-10">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">
+              Let's
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500"
+                >Connect</span
+              >
+            </h2>
+            <p class="max-w-2xl mx-auto text-gray-400">
+              Reach out to discuss potential collaborations or inquiries.
+            </p>
+          </div>
+
+          <div
+            class="max-w-md mx-auto bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-blue-900 text-center"
+          >
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold mb-2 text-blue-400">Email</h3>
+                <a
+                  href="mailto:contact@example.com"
+                  class="text-lg hover:text-blue-300 transition"
+                >
+                  contact@example.com
+                </a>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2 text-blue-400">Phone</h3>
+                <a
+                  href="tel:+1234567890"
+                  class="text-lg hover:text-blue-300 transition"
+                >
+                  (123) 456-7890
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="py-10 px-4 bg-black bg-opacity-80 backdrop-blur-md border-t border-blue-900 mt-auto"
+    >
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <a
+              href="#"
+              class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600"
+            >
+              TOUCH ME
+            </a>
+            <p class="text-gray-500 mt-2">
+              Multimedia Artist & Creative Visionary
+            </p>
+          </div>
+          <div class="flex flex-col items-center md:items-end">
+            <div class="flex space-x-6 mb-4">
+              <a
+                href="https://www.instagram.com"
+                class="text-gray-400 hover:text-blue-400 transition"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com"
+                class="text-gray-400 hover:text-blue-400 transition"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.indeed.com"
+                class="text-gray-400 hover:text-blue-400 transition"
+                ><i class="fas fa-briefcase"></i
+              ></a>
+            </div>
+            <p class="text-gray-600 text-sm">
+              &copy; 2019 Touch Me. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center shadow-lg hover:bg-blue-600 transition z-40"
+      id="back-to-top"
+    >
+      <i class="fas fa-arrow-up text-white"></i>
+    </button>
+
+    <!-- Javascript -->
+    <script src="index.js"></script>
+  </body>
+</html>

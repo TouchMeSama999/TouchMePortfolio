@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Touch Me</title>
+
+    <!-- Tailwindcss -->
+    <link href="src/output.css" rel="stylesheet" />
+
+    <!-- Custom Style CSS -->
+    <link href="style.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/9d7604263d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="min-h-screen bg-black text-gray-200 font-sans overflow-x-hidden">
+    <!-- Animated Background -->
+    <div class="gradient-bg fixed top-0 left-0 w-full h-full -z-50"></div>
+
+    <!-- Navigation -->
+    <nav
+      class="backdrop-blur-md sticky top-0 z-50 border-b border-blue-900"
+      style="background-color: rgba(0, 0, 0, 0.8)"
+    >
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600"
+        >
+          TOUCH ME
+        </a>
+
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html#home" class="hover:text-blue-400 transition"
+            >Home</a
+          >
+          <a href="index.html#portfolio" class="hover:text-blue-400 transition"
+            >Portfolio</a
+          >
+          <a href="index.html#services" class="hover:text-blue-400 transition"
+            >Services</a
+          >
+          <a href="index.html#about" class="hover:text-blue-400 transition"
+            >About</a
+          >
+          <a href="index.html#contact" class="hover:text-blue-400 transition"
+            >Contact</a
+          >
+        </div>
+
+        <button class="md:hidden text-xl" id="mobile-menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden hidden bg-black backdrop-blur-md"
+        style="background-color: rgba(0, 0, 0, 0)"
+        id="mobile-menu"
+      >
+        <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+          <a
+            href="index.html#home"
+            class="py-2 hover:text-blue-400 transition border-b border-blue-900"
+            >Home</a
+          >
+          <a
+            href="index.html#portfolio"
+            class="py-2 hover:text-blue-400 transition border-b border-blue-900"
+            >Portfolio</a
+          >
+          <a
+            href="index.html#services"
+            class="py-2 hover:text-blue-400 transition border-b border-blue-900"
+            >Services</a
+          >
+          <a
+            href="index.html#about"
+            class="py-2 hover:text-blue-400 transition border-b border-blue-900"
+            >About</a
+          >
+          <a
+            href="index.html#contact"
+            class="py-2 hover:text-blue-400 transition"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Item View Section -->
+    <section
+      id="itemview"
+      class="py-16 px-4"
+      style="background-color: rgba(0, 0, 0, 0.7)"
+    >
+      <div
+        class="container mx-auto flex flex-col gap-2 md:flex-row md:items-start justify-center md:gap-16"
+      >
+        <div class="w-full md:w-2/5 flex justify-center mb-8 md:mb-0">
+          <div id="media-container" class="w-full">
+            <img
+              src=""
+              id="MainImg"
+              alt="Item Image"
+              class="w-full max-w-xs md:max-w-sm lg:max-w-md object-contain rounded cursor-pointer"
+              style="display: none"
+            />
+            <div
+              id="youtube-player"
+              style="display: none"
+              class="w-full h-full aspect-video max-w-xs md:max-w-sm lg:max-w-md mx-auto rounded overflow-hidden"
+            ></div>
+            <!-- Thumbnails Gallery for Multiple Images -->
+            <div
+              id="thumbnails-gallery"
+              class="flex flex-wrap gap-2 mt-4 justify-center"
+            ></div>
+          </div>
+        </div>
+        <!-- Fullscreen Modal -->
+        <div
+          id="fullscreenModal"
+          style="
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+          "
+          class="flex items-center justify-center"
+        >
+          <button
+            id="closeFullscreen"
+            style="z-index: 10000"
+            class="absolute top-6 right-6 text-2xl text-gray-400 hover:text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="flex items-center justify-center w-full h-full">
+            <img
+              id="fullscreenImg"
+              src=""
+              alt="Full Image"
+              class="max-h-full max-w-full object-contain select-none"
+              style="transition: transform 0.2s; z-index: 9999"
+            />
+          </div>
+        </div>
+        <div class="w-full p-4 md:w-auto flex flex-col items-start text-left">
+          <h1 class="text-2xl font-bold mb-1" id="item-title"></h1>
+          <p class="text-sm text-gray-400 mb-8" id="item-mediumanddate"></p>
+          <p class="text-sm text-gray-300 mb-4" id="item-description"></p>
+          <div id="item-links" class="mt-6 flex flex-col gap-1"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="py-10 px-4 bg-black bg-opacity-80 backdrop-blur-md border-t border-blue-900"
+    >
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <a
+              href="#"
+              class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600"
+            >
+              TOUCH ME
+            </a>
+            <p class="text-gray-500 mt-2">
+              Multimedia Artist & Creative Visionary
+            </p>
+          </div>
+          <div class="flex flex-col items-center md:items-end">
+            <div class="flex space-x-6 mb-4">
+              <a
+                href="https://www.instagram.com"
+                class="text-gray-400 hover:text-blue-400 transition"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com"
+                class="text-gray-400 hover:text-blue-400 transition"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.indeed.com"
+                class="text-gray-400 hover:text-blue-400 transition"
+                ><i class="fas fa-briefcase"></i
+              ></a>
+            </div>
+            <p class="text-gray-600 text-sm">
+              &copy; 2019 Touch Me. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="index.js"></script>
+    <script>
+      // Add link button(s) if link1 or link2 are present in the URL, with titles
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const link1 = params.get("link1")
+          ? decodeURIComponent(params.get("link1"))
+          : null;
+        const link2 = params.get("link2")
+          ? decodeURIComponent(params.get("link2"))
+          : null;
+        const linktitle1 = params.get("linktitle1")
+          ? decodeURIComponent(params.get("linktitle1"))
+          : null;
+        const linktitle2 = params.get("linktitle2")
+          ? decodeURIComponent(params.get("linktitle2"))
+          : null;
+        const linksDiv = document.getElementById("item-links");
+        const btnClass =
+          "px-4 py-2 rounded-full text-sm font-medium transition portfolio-filter focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-900 text-white hover:bg-blue-800 text-center inline-block";
+        if (linksDiv) {
+          linksDiv.innerHTML = "";
+          if (link1) {
+            if (linktitle1) {
+              const label1 = document.createElement("span");
+              label1.textContent = linktitle1 + " ";
+              label1.className = "font-semibold text-blue-300 mb-1";
+              linksDiv.appendChild(label1);
+            }
+            const btn1 = document.createElement("a");
+            btn1.href = link1;
+            btn1.target = "_blank";
+            btn1.rel = "noopener noreferrer";
+            btn1.className = btnClass;
+            btn1.innerHTML = '<i class="fas fa-link mr-2"></i>View Link 1';
+            linksDiv.appendChild(btn1);
+          }
+          if (link2) {
+            if (linktitle2) {
+              const label2 = document.createElement("span");
+              label2.textContent = linktitle2 + " ";
+              label2.className = "font-semibold text-blue-300 mb-1 mt-1";
+              linksDiv.appendChild(label2);
+            }
+            const btn2 = document.createElement("a");
+            btn2.href = link2;
+            btn2.target = "_blank";
+            btn2.rel = "noopener noreferrer";
+            btn2.className = btnClass;
+            btn2.innerHTML = '<i class="fas fa-link mr-2"></i>View Link 2';
+            linksDiv.appendChild(btn2);
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
